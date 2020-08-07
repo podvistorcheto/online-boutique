@@ -6,6 +6,8 @@ class Orderform(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('full_name',
+                  'email',
+                  'phone_number',
                   'street_address1',
                   'street_address2',
                   'town_or_city',
@@ -15,7 +17,7 @@ class Orderform(forms.ModelForm):
 
         """ First we call the default init method to set the form up as it would be by default."""
 
-        def __init__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
