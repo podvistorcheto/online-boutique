@@ -26,7 +26,9 @@
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     {% endblock %}
     
-     {% block extra_css %} {% endblock %} 
+     {% block extra_css %} 
+     {% endblock %} 
+     
      {% block corejs %}
      <script src="https://kit.fontawesome.com/68e72e7215.js" crossorigin="anonymous"></script>
      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -37,7 +39,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"></script>
-    {% endblock %} 
+    <script src="https://js.stripe.com/v3/"></script>    
+    {% endblock %}
+
     {% block extra_js %} 
     {% endblock %}
 

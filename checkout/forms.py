@@ -15,7 +15,7 @@ class Orderform(forms.ModelForm):
                   'country',
                   'county',)
 
-        """ First we call the default init method to set the form up as it would be by default."""
+        """ First we call the default init method to set the form up as it would be by default"""
 
     def __init__(self, *args, **kwargs):
         """
@@ -32,11 +32,7 @@ class Orderform(forms.ModelForm):
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'county': 'County, State or Locality',
-        }
-        """
-        Next we're setting the autofocus attribute on the full name field to true
-        so the cursor will start in the full name field when the user loads the page.
-        """
+        }       
         self.fields['full_name'].widget.attrs['autofocus'] = True
         """
         Next we're setting the autofocus attribute on the full name field to true
