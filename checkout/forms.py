@@ -13,8 +13,8 @@ class OrderForm(forms.ModelForm):
                   'town_or_city',
                   'postcode',
                   'country',
-                  'county',)
-
+                  'county',
+                  )
         """ First we call the default init method to set the form up as it would be by default"""
 
     def __init__(self, *args, **kwargs):
