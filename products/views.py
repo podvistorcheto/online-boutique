@@ -76,7 +76,7 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only storw admins can do that')
+        messages.error(request, 'Sorry, only store admin can do that')
         return redirect(reverse('home'))
 
     if request.method == "POST":
