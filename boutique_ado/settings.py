@@ -26,7 +26,7 @@ SECRET_KEY = '5=wt(pd_3i9oplp*&+4_xe@rjzetco@1a19cnz77u_tv$#jb-)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['doko-boutique-online-ado', 'localhost']
 
 
 # Application definition
@@ -124,16 +124,18 @@ WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-  }
-}
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://yxgwmwxftclvtx:d8bb031a855d41da5bee5955d4e6164df3f97d34ecb228f0a3a5f2a5b07a282c@ec2-54-75-225-52.eu-west-1.compute.amazonaws.com:5432/da625mlr9e3pq4')
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
