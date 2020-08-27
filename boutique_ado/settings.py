@@ -26,7 +26,7 @@ SECRET_KEY = '5=wt(pd_3i9oplp*&+4_xe@rjzetco@1a19cnz77u_tv$#jb-)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['doko-boutique-online-ado', 'localhost']
+ALLOWED_HOSTS = ['doko-boutique-online-ado.herokuapp.com', 'localhost']
 
 
 # Application definition
